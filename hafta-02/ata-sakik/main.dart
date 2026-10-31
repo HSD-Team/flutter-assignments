@@ -20,16 +20,19 @@ bool isPassing(double avg) => avg >= 60;
 
 
 void main(){
-  print('Not hesaplayıcı');
-  final avg = average(midterm: 70, finalExam: 85);
-  print(avg);
+    final names = ['Ayşe','Mehmet','Zeynep','Can','Elif'];
+    final midterms = [72.0,45.0,90.0,60.0,85.0];
+    final finals = [88.0,60.0,95.0,40.0,70.0];
 
-  print(letterGrade(avg));
-  print(letterGrade(92));
-  print(letterGrade(42));
 
-  print(isPassing(avg));
-  print(isPassing(55));
-
+    for (var i = 0 ; i < names.length; i++){
+      final avg= average(midterm: midterms[i], finalExam: finals[i]);
+      
+      final status = isPassing(avg) ? 'Geçti' : 'Kaldı' ;
+      
+        print('${names[i]}: ${avg.toStringAsFixed(2)} ${letterGrade(avg)} $status');
+          
+          
+    }
 
 }
