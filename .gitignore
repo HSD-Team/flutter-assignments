@@ -1,0 +1,55 @@
+# HSD mobil repoları için .gitignore
+# Kalıplar başında "/" olmadığı için her alt klasörde (hafta-XX/ad-soyad/...) geçerlidir.
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+.widget_preview/
+**/doc/api/
+app.*.symbols
+app.*.map.json
+
+# Android
+.gradle/
+local.properties
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+*.jks
+*.keystore
+key.properties
+
+# iOS / macOS
+Pods/
+.symlinks/
+**/ios/Flutter/.last_build_id
+xcuserdata/
+
+# Firebase yapılandırması: her geliştirici "flutterfire configure" ile kendisi üretir.
+# Public repoda Google API anahtarı uyarısını önler. CI'da secret'tan yazılır (org-github/README.md).
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+firebase_app_id_file.json
+
+# Ortam dosyaları
+.env
+env/*.json
+!env/example.json
+
+# Editör ve sistem
+.idea/
+*.iml
+*.ipr
+*.iws
+.history
+*.swp
+*.log
+.DS_Store
+Thumbs.db
