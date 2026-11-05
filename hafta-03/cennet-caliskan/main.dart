@@ -79,7 +79,7 @@ void main() {
   );
   print(duyuru.toString());
 
-  print('\--- Etkinlik Kayıt Testi (Bitti Sayılması İçin Gerekli Adım) ---');
+  print('\--- Etkinlik Kayıt Testi  ---');
 
 
   Event etkinlik = Event(
